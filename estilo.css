@@ -1,0 +1,46 @@
+header{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
+}
+
+nav{
+    flex-grow: 1;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+ul a:link, a:visited {
+    padding: 10px;
+    text-decoration: none;
+    color: gray;
+}
+
+ul a:link, a:hover {
+    color: blue;
+}
+
+.botao{
+    text-decoration: none;
+    border: 2px solid blue;
+    border-radius: 15px;
+    padding: 5px 30px;
+}
+
+.botao.destaque{
+background: blue;
+color: white;
+}
+
+.botao:hover{
+ background: rgb(142, 179, 235);
+ color: white;
+}
+.botao.destaque:hover{
+background: rgb(52, 60, 219);
+
+}
