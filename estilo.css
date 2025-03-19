@@ -1,46 +1,126 @@
-header{
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        /* selecionar a ordem de exibição dos itens*/
+        'cabecalho cabecalho'
+        'capa-conteudo capa-imagem'
+        'organizacao-imagem organizacao-conteudo';
+        row-gap: 20px;/* espaçamentos entre grids*/
+        column-gap: 20px;
+}
+
+
+header {
+    border: 1px solid red;
+    grid-area: cabecalho;
     display: flex;
     align-items: center;
     padding: 0 10px;
-
 }
 
-nav{
+section#capa-conteudo {
+    grid-area: capa-conteudo;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#capa-imagem {
+    grid-area: capa-imagem;
+    border: 1px solid red;
+}
+
+section#organizacao-imagem {
+    grid-area: organizacao-imagem;
+    border: 1px solid red;
+}
+
+section#capa-imagem > img, section#organizacao-imagem > img{ /*imagens responsivas ao tamanho da tela*/
+max-width: 100%;
+}
+
+section#organizacao-conteudo {
+    grid-area: organizacao-conteudo;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer{
+    background: #f2f2f2;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    
+}
+nav {
     flex-grow: 1;
 }
 
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
 }
 
-ul a:link, a:visited {
+ul a:link,
+a:visited {
     padding: 10px;
     text-decoration: none;
     color: gray;
 }
 
-ul a:link, a:hover {
+ul a:link,
+a:hover {
     color: blue;
 }
 
-.botao{
+.botao {
     text-decoration: none;
     border: 2px solid blue;
     border-radius: 15px;
     padding: 5px 30px;
+    align-self: start;
 }
 
-.botao.destaque{
-background: blue;
-color: white;
+.botao.destaque {
+    background: blue;
+    color: white;
 }
 
-.botao:hover{
- background: rgb(142, 179, 235);
- color: white;
+.botao:hover {
+    background: rgb(142, 179, 235);
+    color: white;
 }
-.botao.destaque:hover{
-background: rgb(52, 60, 219);
 
+.botao.destaque:hover {
+    background: rgb(52, 60, 219);
+
+}
+
+/*formatação de textos*/
+
+body{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+p{
+    font-size: 1rem;
 }
